@@ -6,6 +6,7 @@
 **Memory Security:** None
 
 **Description**
+
 This challenge was a basic buffer overflow. The attack vector for this challenge, is through an environment variable called "filename". The getowner binary reads this information and performs a strcpy, allowing me to smash the stack and gain control of EIP. The payload, which includes a nopsled and shellcode, was stored in an additional environment variable and the address of this environment variables was discovered using the getenvaddr tool.
 
 
